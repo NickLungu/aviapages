@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+	<meta charset="UTF-8">
+	<title>Aircraft Search</title>
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<h1>Aircraft Search</h1>
+	<form action="search" method="get">
+		<label for="search_type">Search by:</label>
+		<select name="search_type" id="search_type">
+			<option value="tail_number">Tail Number</option>
+			<option value="serial_number">Serial Number</option>
+		</select>
+		<label for="search_query">Search Query:</label>
+		<input type="text" id="search_query" name="search_query" placeholder="Enter a tail number or serial number">
+		<button type="submit">Search</button>
+	</form>
+	{% if aircrafts %}
+		<div class="aircrafts-container">
+			{% for aircraft in aircrafts %}
+				<div class="aircraft">
+					<a href="{% url 'details' tail_number=aircraft.tail_number %}">
+						<div class="aircraft-info">
+							<div class="aircraft-row">
+								<div class="aircraft-label">Tail number:</div>
+								<div class="aircraft-value">{{ aircraft.tail_number }}</div>
+							</div>
+							<div class="aircraft-row">
+								<div class="aircraft-label">Serial number:</div>
+								<div class="aircraft-value">{{ aircraft.serial_number }}</div>
+							</div>
+							<div class="aircraft-row">
+								<div class="aircraft-label">Manufacturer name:</div>
+								<div class="aircraft-value">{{ aircraft.manufacturer_name }}</div>
+							</div>
+							<div class="aircraft-row">
+								<div class="aircraft-label">Aircraft type name:</div>
+								<div class="aircraft-value">{{ aircraft.aircraft_type_name }}</div>
+							</div>
+							<div class="aircraft-row">
+								<div class="aircraft-label">Year of production:</div>
+								<div class="aircraft-value">{{ aircraft.year_of_production }}</div>
+							</div>
+						</div>
+						<div class="aircraft-images">
+							{% for img in aircraft.images %}
+								{% if forloop.counter <= 3 %}
+									<img src="{{ img.url }}" alt="not available" height="30px"/>
+								{% endif %}
+							{% endfor %}
+						</div>
+					</a>
+				</div>
+			{% endfor %}
+		</div>
+	{% else %}
+		<p>No aircraft found.</p>
+	{% endif %}
+</body>
+</html>

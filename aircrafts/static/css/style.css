@@ -1,0 +1,113 @@
+body {
+	background-color: #f2f2f2;
+	font-family: Arial, sans-serif;
+}
+
+h1 {
+	text-align: center;
+}
+
+form {
+	display: flex;
+	justify-content: center;
+	margin: 20px 0;
+}
+
+label {
+	margin-right: 10px;
+}
+
+select,
+input[type="text"],
+button {
+	padding: 5px;
+	border: none;
+	border-radius: 5px;
+	font-size: 16px;
+}
+
+select {
+	margin-right: 10px;
+}
+
+button {
+	background-color: #4CAF50;
+	color: white;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #3e8e41;
+}
+
+.aircrafts-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	margin: 20px;
+}
+
+.aircraft {
+	background-color: white;
+	border-radius: 5px;
+	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+	margin: 10px;
+	padding: 20px;
+	width: 400px;
+}
+
+.aircraft-info {
+	margin-bottom: 10px;
+}
+
+.aircraft-row {
+	display: flex;
+	margin-bottom: 5px;
+}
+
+.aircraft-label {
+	flex-basis: 150px;
+	font-weight: bold;
+}
+
+.aircraft-images img {
+	margin-right: 5px;
+}
+
+p {
+	text-align: center;
+	margin: 20px 0;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+a {
+	color: black;
+	text-decoration: none;
+}
+
+/* Style for company information section */
+.company-info {
+	margin-bottom: 50px;
+}
+
+/* Style for company information rows */
+.company-row {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+
+/* Style for company information labels */
+.company-label {
+	font-size: 20px;
+	font-weight: bold;
+	margin-right: 20px;
+}
+
+/* Style for company information values */
+.company-value {
+	font-size: 20px;
+}

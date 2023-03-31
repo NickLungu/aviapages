@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% load static %}
+
+<head>
+  <meta charset="UTF-8">
+  <title>Aircraft Details</title>
+  <link href="{% static 'css/style-info.css' %}" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+  <div class="aircraft-container">
+    <h1>Aircraft Details</h1>
+
+    <div class="aircraft-info">
+<!--      <div class="aircraft-row">-->
+<!--        <div class="aircraft-label">Tail number:&nbsp;&nbsp;</div>-->
+<!--        <div class="aircraft-value">{{ aircraft.tail_number }}</div>-->
+<!--      </div>-->
+
+<!--      <div class="aircraft-row">-->
+<!--        <div class="aircraft-label">Serial number:&nbsp;&nbsp;</div>-->
+<!--        <div class="aircraft-value">{{ aircraft.serial_number }}</div>-->
+<!--      </div>-->
+
+<!--      <div class="aircraft-row">-->
+<!--        <div class="aircraft-label">Manufacturer name:&nbsp;&nbsp;</div>-->
+<!--        <div class="aircraft-value">{{ aircraft.manufacturer_name }}</div>-->
+<!--      </div>-->
+
+<!--      <div class="aircraft-row">-->
+<!--        <div class="aircraft-label">Aircraft type name:&nbsp;&nbsp;</div>-->
+<!--        <div class="aircraft-value">{{ aircraft.aircraft_type_name }}</div>-->
+<!--      </div>-->
+
+<!--      <div class="aircraft-row">-->
+<!--        <div class="aircraft-label">Year of production:&nbsp;&nbsp;</div>-->
+<!--        <div class="aircraft-value">{{ aircraft.year_of_production }}</div>-->
+<!--      </div>-->
+
+      <div class="aircraft-row">
+        <div class="aircraft-label">Aircraft class:&nbsp;&nbsp;</div>
+        <div class="aircraft-value">{{ aircraft.aircraft_class_name }}</div>
+      </div>
+    </div>
+
+    <div class="company-info">
+      <div class="company-row">
+        <div class="company-label">Operating company:&nbsp;&nbsp;</div>
+        <div class="company-value">{{ company.name }}</div>
+      </div>
+
+      <div class="company-row">
+        <div class="company-label">Phone:&nbsp;&nbsp;</div>
+        <div class="company-value">{{ company.phone }}</div>
+      </div>
+
+      <div class="company-row">
+        <div class="company-label">Website:&nbsp;&nbsp;</div>
+        <div class="company-value">{{ company.website }}</div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
